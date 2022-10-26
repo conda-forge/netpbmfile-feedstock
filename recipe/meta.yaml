@@ -1,5 +1,5 @@
 {% set name = "netpbmfile" %}
-{% set version = "2022.9.12" %}
+{% set version = "2022.10.25" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/netpbmfile-{{ version }}.tar.gz
-  sha256: 2dbb369709febf045d995ba0a9b5eac2c64fe7432cc8f2f00fea7c4336c6a4bb
+  sha256: 9cb2eebd94a507473d9b6d2427d382206c2dae9c8c3119f47da517165c49924d
 
 build:
   number: 0
