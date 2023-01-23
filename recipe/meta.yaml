@@ -22,8 +22,9 @@ requirements:
     - python >=3.8
   run:
     - numpy >=1.19.2
-    - matplotlib-base >=3.4.3
+    - matplotlib-base
     - python >=3.8
+    - tifffile
 
 test:
   imports:
