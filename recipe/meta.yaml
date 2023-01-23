@@ -1,5 +1,5 @@
 {% set name = "netpbmfile" %}
-{% set version = "2022.10.25" %}
+{% set version = "2023.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/netpbmfile-{{ version }}.tar.gz
-  sha256: 9cb2eebd94a507473d9b6d2427d382206c2dae9c8c3119f47da517165c49924d
+  sha256: 94dded251de192d26738ba2141946ae7adb311653b24c76932c0c81491ecaee6
 
 build:
   number: 0
@@ -22,8 +22,9 @@ requirements:
     - python >=3.8
   run:
     - numpy >=1.19.2
-    - matplotlib-base >=3.4.3
+    - matplotlib-base
     - python >=3.8
+    - tifffile
 
 test:
   imports:
