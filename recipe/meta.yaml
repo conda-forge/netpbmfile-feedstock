@@ -19,11 +19,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.9
   run:
-    - numpy >=1.19.2
+    - numpy
     - matplotlib-base
-    - python >=3.8
+    - python >=3.9
     - tifffile
 
 test:
