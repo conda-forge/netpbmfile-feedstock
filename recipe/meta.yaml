@@ -1,13 +1,13 @@
 {% set name = "netpbmfile" %}
-{% set version = "2023.8.30" %}
+{% set version = "2025.5.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/netpbmfile-{{ version }}.tar.gz
-  sha256: 3bf1137b53bbcdb77ebec77369d338e1ad0a9d2b90f22fa418bba18eb5f380b9
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/netpbmfile-{{ version }}.tar.gz
+  sha256: 98f0c9f07e073639f00b240e29184e4702d37243bb301d49f07202f5dbb08b7e
 
 build:
   number: 0
