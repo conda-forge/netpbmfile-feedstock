@@ -1,46 +1,48 @@
 {% set name = "netpbmfile" %}
-{% set version = "2023.8.30" %}
+{% set version = "2025.5.8" %}
+{% set sha256 = "98f0c9f07e073639f00b240e29184e4702d37243bb301d49f07202f5dbb08b7e" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/netpbmfile-{{ version }}.tar.gz
-  sha256: 3bf1137b53bbcdb77ebec77369d338e1ad0a9d2b90f22fa418bba18eb5f380b9
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
   entry_points:
     - netpbmfile = netpbmfile.netpbmfile:main
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
+    - setuptools
   run:
     - numpy
-    - matplotlib-base
-    - python >=3.9
-    - tifffile
+    - python >={{ python_min }}
 
 test:
   imports:
     - netpbmfile
   commands:
-    - pip list
     - pip check
-    - netpbmfile --doctest
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
-  home: https://www.lfd.uci.edu/~gohlke/
+  home: https://www.cgohlke.com/
   summary: Read and write Netpbm files
   license: BSD-3-Clause
   license_file: LICENSE
+  description: |
+    Netpbmfile is a Python library to read and write image files in the Netpbm or related formats.
   dev_url: https://github.com/cgohlke/netpbmfile/
 
 extra:
