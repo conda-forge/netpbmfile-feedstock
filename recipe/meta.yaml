@@ -1,7 +1,7 @@
 {% set name = "netpbmfile" %}
 {% set version = "2025.12.12" %}
 {% set sha256 = "0bd14a0bd43027732a8920823d103b623a4d8bbbbf1263ac92c65b5619ca80ed" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
