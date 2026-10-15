@@ -1,6 +1,6 @@
 {% set name = "netpbmfile" %}
-{% set version = "2026.7.25" %}
-{% set sha256 = "7e8556b0a4507ef062158a2ae26a93e1e7e9419530c30d209ce5474e68ee4e6e" %}
+{% set version = "2026.10.15" %}
+{% set sha256 = "fd8b646c34aeccfe7f7dc221843790a558fa2c5ede6d8d8df795010b14f4c4ba" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
