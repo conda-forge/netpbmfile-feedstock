@@ -11,7 +11,8 @@ Summary: Read and write Netpbm files
 
 Development: https://github.com/cgohlke/netpbmfile/
 
-Netpbmfile is a Python library to read and write image files in the Netpbm or related formats.
+Netpbmfile is a Python library to read and write image files in the Netpbm or related formats
+(PBM, PGM, PPM, PNM, PAM, PGX, PF, Pf, PF4, XV).
 
 
 Current build status
@@ -45,31 +46,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `netpbmfile` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install netpbmfile
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install netpbmfile
 ```
 
-It is possible to list all of the versions of `netpbmfile` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add netpbmfile
+# for installing globally
+pixi global install netpbmfile
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `netpbmfile` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search netpbmfile --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search netpbmfile --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search netpbmfile --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -81,6 +124,8 @@ mamba repoquery whoneeds netpbmfile --channel conda-forge
 # List dependencies of `netpbmfile`:
 mamba repoquery depends netpbmfile --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
